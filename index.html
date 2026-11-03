@@ -1,98 +1,101 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#21101d">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="AiPri図鑑">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#171018"><title>My AiPri Collection</title>
 <link rel="manifest" href="manifest.webmanifest">
-<title>♡ My AiPri Collection</title>
 <style>
-:root{--bg:#160f17;--panel:#251824;--panel2:#321f30;--pink:#ff9dce;--pink2:#f45eaa;--muted:#cba9bf;--line:#70405f;--white:#fff6fb}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#40213a 0,#160f17 52%);color:var(--white);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;min-height:100vh}
-header{padding:26px 18px 18px;text-align:center;background:linear-gradient(145deg,#4a1e3c,#21101d 75%);border-bottom:1px solid var(--line)}
-.brand{font-size:12px;letter-spacing:.2em;color:#ffc1e0}.brand b{color:var(--pink);font-size:18px}.hero{font-size:25px;font-weight:900;margin:9px 0 4px}.sub{font-size:11px;color:#e9b9d2;letter-spacing:.12em}
-main{max-width:920px;margin:auto;padding:15px 13px 90px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 15px}.stat{background:#3b2337;border:1px solid #70405f;border-radius:14px;padding:12px 6px;text-align:center}.stat strong{display:block;font-size:25px;color:var(--pink)}.stat span{font-size:11px;color:#f1c8df}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.btn{border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:#3a2035;color:white;font-weight:700;font-size:13px}.btn.primary{background:linear-gradient(135deg,#fa83bd,#bd397e);border:0;color:#260f20}.btn.small{padding:7px 10px;font-size:12px}.btn.danger{color:#ff9db9}.tabs{display:flex;gap:7px;margin:14px 0}.tab{flex:1}.tab.active{background:#f47db7;color:#2b1022;border-color:#f47db7}
-input,select{width:100%;background:#1c131c;border:1px solid #68405b;border-radius:11px;padding:12px;color:white;font:inherit;font-size:14px;min-width:0}input::placeholder{color:#a98a9e}.filters{display:grid;grid-template-columns:1fr 115px;gap:8px;margin:12px 0}.section-title{font-size:14px;letter-spacing:.12em;color:var(--pink);margin:18px 0 10px;font-weight:800}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:linear-gradient(160deg,#352337,#211722);border:1px solid #70405f;border-radius:15px;padding:9px;min-width:0;overflow:hidden}.photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;background:linear-gradient(145deg,#5a2b50,#241526);display:flex;align-items:center;justify-content:center;color:#ffc1e0;font-size:14px;text-align:center}.placeholder{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;color:#ffc1e0;font-weight:800}.placeholder span{font-size:35px}.card h3{font-size:14px;margin:9px 0 3px;overflow-wrap:anywhere}.meta{font-size:11px;color:var(--muted);line-height:1.6;min-height:18px}.pill{display:inline-block;border:1px solid #a34f82;color:#ffc2e0;border-radius:20px;padding:3px 8px;font-size:10px;margin-top:6px}.count{color:#ffacd6;font-weight:900;font-size:16px}.card-actions{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}.card-actions .btn{flex:1}
-.panel{background:#291c29;border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field label{display:block;color:#f1b8d7;font-size:11px;margin:0 0 5px}.field.full{grid-column:1/-1}.hidden{display:none!important}.empty{text-align:center;padding:35px 12px;background:#261a27;border:1px dashed #78476a;border-radius:15px;color:#e7b8d2}.empty b{display:block;color:var(--pink);font-size:18px;margin:8px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.hint{font-size:11px;color:#c5a5b9;line-height:1.7}.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;font-size:12px}.table th,.table td{padding:10px 7px;border-bottom:1px solid #56374e;text-align:left;white-space:nowrap}.table th{color:#ffb9da}.qtybtn{padding:5px 9px;border-radius:8px;border:1px solid #78476a;background:#39243a;color:white}
-footer{text-align:center;color:#a9859b;font-size:10px;padding:20px}
-@media(min-width:620px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{font-size:32px}}
-</style>
-</head>
+:root{--pink:#ff72b6;--hot:#f43d91;--bg:#120d14;--panel:#211722;--panel2:#2c1c2b;--line:#51334d;--text:#fff2fa;--muted:#c8aebe}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#49213e 0,transparent 35%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif}
+header{padding:22px 16px 16px;text-align:center;border-bottom:1px solid var(--line)}h1{font-size:23px;margin:0;color:#ff9bc9;letter-spacing:.04em}header p{margin:6px 0 0;color:var(--muted);font-size:12px}
+main{max-width:950px;margin:auto;padding:16px}.panel{background:#211722ed;border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0;box-shadow:0 8px 24px #0004}
+h2{font-size:17px;margin:0 0 12px;color:#ff9bc9}label{display:block;font-size:12px;color:var(--muted);margin:9px 0 5px}input,select,textarea,button{font:inherit}input,select,textarea{width:100%;background:#140f17;color:white;border:1px solid #69435f;border-radius:10px;padding:11px}textarea{min-height:65px}
+button{border:0;border-radius:10px;padding:11px 14px;background:var(--hot);color:white;font-weight:700;cursor:pointer}button.secondary{background:#493047;border:1px solid #80516f}button.danger{background:#842b54}button:disabled{opacity:.5}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:1}.tiny{font-size:12px;color:var(--muted)}.hidden{display:none!important}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#301e30;border-radius:12px;padding:10px;text-align:center}.stat b{display:block;font-size:22px;color:#ff9bc9}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px}.card{background:#291d2b;border:1px solid #54374f;border-radius:13px;overflow:hidden}.card img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#160f18}.card .body{padding:9px}.card h3{font-size:13px;margin:0 0 5px}.card p{font-size:11px;color:var(--muted);margin:3px 0}.qty{font-weight:bold;color:#ff9bc9}
+#notice{padding:10px;border-radius:10px;background:#39243a;color:#ffd8eb;font-size:13px;margin:10px 0}
+@media(min-width:650px){.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}}
+</style></head>
 <body>
-<header><div class="brand">♡ <b>MY AiPri</b> COLLECTION ♡</div><div class="hero">わたしのアイプリ図鑑</div><div class="sub">PRECIOUS CARDS · MY LITTLE TREASURE</div></header>
+<header><h1>♡ My AiPri Collection ♡</h1><p>ひみつのアイプリ / リング / おねがいアイプリ</p></header>
 <main>
-<section class="stats">
- <div class="stat"><strong id="total">0</strong><span>所持枚数</span></div>
- <div class="stat"><strong id="kinds">0</strong><span>カード種類</span></div>
- <div class="stat"><strong id="dupes">0</strong><span>ダブり枚数</span></div>
+<div id="notice">Supabase設定前です。READMEの手順で接続情報を設定してください。</div>
+<section id="auth" class="panel">
+<h2>♡ ログイン / 新規登録</h2>
+<label>メールアドレス</label><input id="email" type="email" autocomplete="email" placeholder="name@example.com">
+<label>パスワード</label><input id="password" type="password" autocomplete="current-password" placeholder="8文字以上を推奨">
+<div class="row" style="margin-top:12px"><button id="signup">新規登録</button><button id="login" class="secondary">ログイン</button></div>
+<button id="reset" class="secondary" style="margin-top:8px;width:100%">パスワードを忘れた場合</button>
+<p class="tiny">登録確認メールが届いた場合は、メール内のリンクを開いてからログインしてね。</p>
 </section>
-<div class="actions">
- <button class="btn primary" id="addBtn">＋ カードを登録</button>
- <button class="btn" id="exportBtn">↓ バックアップ</button>
- <button class="btn" id="importBtn">↑ 復元</button>
- <input id="importFile" type="file" accept="application/json" class="hidden">
+<section id="app" class="hidden">
+<div class="panel"><div class="row"><div><b id="userLabel"></b><div class="tiny">あなたのコレクション</div></div><button id="logout" class="secondary">ログアウト</button></div></div>
+<div class="panel"><div class="stats"><div class="stat"><b id="total">0</b><span class="tiny">所持枚数</span></div><div class="stat"><b id="types">0</b><span class="tiny">所持種類</span></div><div class="stat"><b id="dupes">0</b><span class="tiny">ダブり</span></div></div></div>
+<div class="panel">
+<h2>♡ カードを追加 / 編集</h2><input id="editId" type="hidden">
+<div class="formgrid">
+<div><label>カード名 *</label><input id="name" placeholder="例：○○コーデ"></div>
+<div><label>キャラクター</label><input id="character" placeholder="キャラクター名"></div>
+<div><label>シリーズ</label><select id="series"><option>ひみつのアイプリ</option><option>リング編</option><option>おねがいアイプリ</option><option>その他・スペシャル</option></select></div>
+<div><label>弾・収録</label><input id="release" placeholder="例：1だん / スペシャル"></div>
+<div><label>カード番号</label><input id="number" placeholder="例：A-001"></div>
+<div><label>レアリティ</label><input id="rarity" placeholder="例：★4"></div>
+<div><label>入手区分</label><select id="kind"><option>通常</option><option>スペシャル・非売品</option><option>プロモ・配布</option><option>グミ・商品付属</option><option>その他</option></select></div>
+<div><label>所持枚数</label><input id="quantity" type="number" min="0" value="0"></div>
 </div>
-<div id="formPanel" class="panel hidden">
- <div class="row"><b style="color:var(--pink)">♡ CARD INFORMATION</b><button class="btn small" id="closeForm">閉じる</button></div>
- <form id="cardForm">
- <div class="formgrid" style="margin-top:12px">
-  <div class="field full"><label>カード名 *</label><input id="name" required maxlength="80" placeholder="例：お気に入りのカード"></div>
-  <div class="field"><label>キャラクター名</label><input id="character" maxlength="60" placeholder="キャラクター"></div>
-  <div class="field"><label>コーデ名</label><input id="outfit" maxlength="80" placeholder="コーデ名"></div>
-  <div class="field"><label>レアリティ</label><select id="rarity"><option>N</option><option>R</option><option>SR</option><option>PR</option><option>CP</option><option>HR</option><option>LR</option><option>その他</option></select></div>
-  <div class="field"><label>シリーズ・弾数</label><input id="series" maxlength="60" placeholder="例：第1弾"></div>
-  <div class="field"><label>所持枚数</label><input id="qty" type="number" min="1" max="9999" value="1" required></div>
-  <div class="field"><label>カード写真</label><input id="photo" type="file" accept="image/*"></div>
-  <div class="field full"><label>メモ</label><input id="memo" maxlength="300" placeholder="入手日・交換メモなど"></div>
- </div>
- <div class="actions"><button class="btn primary" type="submit">保存する ♡</button><button class="btn" type="button" id="cancelForm">キャンセル</button></div>
- <p class="hint">写真はこの端末のブラウザ内に保存されます。大量の写真を登録する場合は、定期的にバックアップしてください。</p>
- </form>
+<label>コーデ名 / メモ</label><textarea id="memo" placeholder="メモなど"></textarea>
+<label>カード画像（任意）</label><input id="photo" type="file" accept="image/*">
+<div class="row" style="margin-top:12px"><button id="save">保存する</button><button id="clear" class="secondary">入力クリア</button></div>
+<p class="tiny">画像はクラウド保存されます。公開・配布する権利のない画像はアップロードせず、個人利用の範囲で管理してね。</p>
 </div>
-<div class="tabs"><button class="btn tab active" data-tab="gallery">♡ カード図鑑</button><button class="btn tab" data-tab="database">▤ データベース</button></div>
-<div class="filters"><input id="search" placeholder="カード名・キャラ・コーデで検索"><select id="rarityFilter"><option value="">すべてのレアリティ</option><option>N</option><option>R</option><option>SR</option><option>PR</option><option>CP</option><option>HR</option><option>LR</option><option>その他</option></select></div>
-<div class="row"><div class="section-title">CARD COLLECTION</div><button class="btn small" id="favFilter">♡ お気に入りのみ</button></div>
-<div id="gallery" class="grid"></div>
-<div id="database" class="panel hidden"></div>
-<div class="panel"><b style="color:var(--pink)">♡ DATA & PRIVACY</b><p class="hint">カード情報と写真はこのブラウザの端末内に保存されます。ブラウザのデータ消去・端末変更・故障に備えて、定期的に「バックアップ」を保存してください。バックアップファイルにはカード写真も含まれます。共有端末では使用しないでください。</p></div>
-<footer>♡ MY AiPri COLLECTION · made with love ♡</footer>
-</main>
-<script>
-const DB='aipri-local-db', STORE='cards'; let db, cards=[], editing=null, favoriteOnly=false, activeTab='gallery';
+<div class="panel">
+<h2>♡ カード図鑑</h2><label><input id="filterFav" type="checkbox" style="width:auto"> お気に入りのみ</label>
+<div class="formgrid">
+<div><label>検索</label><input id="search" placeholder="カード名・キャラ・番号"></div>
+<div><label>シリーズ</label><select id="filterSeries"><option value="">すべて</option><option>ひみつのアイプリ</option><option>リング編</option><option>おねがいアイプリ</option><option>その他・スペシャル</option></select></div>
+<div><label>所持状況</label><select id="filterOwned"><option value="">すべて</option><option value="owned">所持あり</option><option value="unowned">未所持</option><option value="dupe">ダブりあり</option></select></div>
+</div><p class="tiny" id="count"></p><div id="cards" class="grid"></div>
+</div>
+<div class="panel" id="updatePanel"><h2>♡ 新弾データの自動チェック</h2><p class="tiny" id="updateStatus">最新のカタログを確認しています…</p><div class="row"><button id="checkUpdates" class="secondary">今すぐ確認</button><button id="applyUpdates" disabled>新しいカードを一括追加</button></div><p class="tiny">公式情報を確認して作成されたカタログデータが公開されると、未登録カードだけを追加できます。所持数・お気に入り・既存カード情報は保持します。</p></div>
+<div class="panel"><h2>♡ バックアップ</h2><div class="row"><button id="export" class="secondary">JSONを書き出す</button><label class="secondary" style="padding:10px;border-radius:10px;text-align:center;background:#493047;color:white">JSONを読み込む<input id="import" type="file" accept="application/json" style="display:none"></label></div><p class="tiny">クラウド保存に加えて、定期的にバックアップを保存してね。</p></div>
+</section></main>
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const SUPABASE_URL='https://fgzuqflxnqvsvdovgcdg.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_h6Fny9cLkfhSmHihEhHYFw_ksQRpZNA';
+const configured=!SUPABASE_URL.startsWith('YOUR_')&&!SUPABASE_ANON_KEY.startsWith('YOUR_');
 const $=id=>document.getElementById(id);
-function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:'id',autoIncrement:true});r.onsuccess=()=>{db=r.result;resolve()};r.onerror=()=>reject(r.error)})}
-function req(mode,fn){return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,mode),s=tx.objectStore(STORE),r=fn(s);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
-async function refresh(){cards=await req('readonly',s=>s.getAll());render()}
-function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function filtered(){const q=$('search').value.toLowerCase(),r=$('rarityFilter').value;return cards.filter(c=>(!r||c.rarity===r)&&(!favoriteOnly||c.favorite)&&[c.name,c.character,c.outfit,c.series,c.memo].join(' ').toLowerCase().includes(q))}
-function render(){
- const total=cards.reduce((a,c)=>a+Number(c.qty||1),0);$('total').textContent=total;$('kinds').textContent=cards.length;$('dupes').textContent=cards.reduce((a,c)=>a+Math.max(0,Number(c.qty||1)-1),0);
- const list=filtered();$('gallery').classList.toggle('hidden',activeTab!=='gallery');$('database').classList.toggle('hidden',activeTab!=='database');
- $('gallery').innerHTML=list.length?list.map(c=>`<article class="card">
- ${c.photo?`<img class="photo" src="${c.photo}" alt="${esc(c.name)}">`:`<div class="photo"><div class="placeholder"><span>♡</span>AiPri CARD</div></div>`}
- <h3>${esc(c.name)}</h3><div class="meta">${esc(c.character||'キャラ未登録')}<br>${esc(c.outfit||'')} ${esc(c.series||'')}</div>
- <span class="pill">${esc(c.rarity)}</span> <span class="count">× ${c.qty}</span>
- ${c.memo?`<div class="meta">${esc(c.memo)}</div>`:''}
- <div class="card-actions"><button class="btn small" data-act="fav" data-id="${c.id}">${c.favorite?'♥':'♡'}</button><button class="btn small" data-act="edit" data-id="${c.id}">編集</button><button class="btn small" data-act="plus" data-id="${c.id}">＋1</button><button class="btn small danger" data-act="del" data-id="${c.id}">削除</button></div>
- </article>`).join(''):`<div class="empty" style="grid-column:1/-1">♡<b>${cards.length?'該当カードがないよ':'まだカードがないよ'}</b>${cards.length?'検索条件を変えてみてね':'「カードを登録」から最初の1枚を登録してね！'}</div>`;
- $('database').innerHTML=list.length?`<div class="tablewrap"><table class="table"><thead><tr><th>カード名</th><th>キャラ</th><th>レア</th><th>枚数</th><th>操作</th></tr></thead><tbody>${list.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.character||'-')}</td><td>${esc(c.rarity)}</td><td><button class="qtybtn" data-act="minus" data-id="${c.id}">−</button> ${c.qty} <button class="qtybtn" data-act="plus" data-id="${c.id}">＋</button></td><td><button class="qtybtn" data-act="edit" data-id="${c.id}">編集</button></td></tr>`).join('')}</tbody></table></div>`:`<div class="empty">登録カードがありません ♡</div>`;
-}
-function showForm(c){editing=c||null;$('cardForm').reset();$('qty').value=c?.qty||1;$('name').value=c?.name||'';$('character').value=c?.character||'';$('outfit').value=c?.outfit||'';$('rarity').value=c?.rarity||'N';$('series').value=c?.series||'';$('memo').value=c?.memo||'';$('formPanel').classList.remove('hidden');$('formPanel').scrollIntoView({behavior:'smooth',block:'start'})}
-$('addBtn').onclick=()=>showForm();$('closeForm').onclick=$('cancelForm').onclick=()=>$('formPanel').classList.add('hidden');
-$('cardForm').onsubmit=async e=>{e.preventDefault();let photo=editing?.photo||'';const f=$('photo').files[0];if(f){if(f.size>5*1024*1024){alert('写真は5MB以下にしてください');return}photo=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(f)})}
- const data={name:$('name').value.trim(),character:$('character').value.trim(),outfit:$('outfit').value.trim(),rarity:$('rarity').value,series:$('series').value.trim(),qty:Math.max(1,Math.min(9999,Number($('qty').value)||1)),memo:$('memo').value.trim(),photo,favorite:editing?.favorite||false};
- if(editing)await req('readwrite',s=>s.put({...editing,...data}));else await req('readwrite',s=>s.add(data));$('formPanel').classList.add('hidden');await refresh()};
-document.addEventListener('click',async e=>{const b=e.target.closest('[data-act]');if(!b)return;const id=Number(b.dataset.id),c=cards.find(x=>x.id===id);if(!c)return;switch(b.dataset.act){case'fav':await req('readwrite',s=>s.put({...c,favorite:!c.favorite}));break;case'edit':showForm(c);return;case'plus':await req('readwrite',s=>s.put({...c,qty:c.qty+1}));break;case'minus':await req('readwrite',s=>s.put({...c,qty:Math.max(1,c.qty-1)}));break;case'del':if(confirm(`「${c.name}」を削除する？`))await req('readwrite',s=>s.delete(id));break;}await refresh()});
-$('search').oninput=render;$('rarityFilter').onchange=render;$('favFilter').onclick=()=>{favoriteOnly=!favoriteOnly;$('favFilter').textContent=favoriteOnly?'♥ お気に入り表示中':'♡ お気に入りのみ';render()};
-document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));render()});
-$('exportBtn').onclick=()=>{const blob=new Blob([JSON.stringify({app:'My AiPri Collection',version:1,cards},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='aipri-backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href)};
-$('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d.cards))throw Error();if(!confirm('バックアップのカードを現在のデータに追加します。よろしいですか？'))return;for(const c of d.cards){const {id,...safe}=c;await req('readwrite',s=>s.add(safe))}await refresh();alert('復元しました ♡')}catch{alert('バックアップファイルを読み込めませんでした')}e.target.value=''};
-(async()=>{try{await openDB();await refresh();if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{})}catch(e){alert('このブラウザでは保存機能を利用できません。Safariなどで開いてください。')}})();
-</script>
-</body></html>
+let sb=null,user=null,items=[];
+function note(s){$('notice').textContent=s}
+function showApp(){ $('auth').classList.toggle('hidden',!!user);$('app').classList.toggle('hidden',!user);$('userLabel').textContent=user?.email||''; }
+if(configured){sb=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);const {data}=await sb.auth.getSession();user=data.session?.user||null;showApp();if(user)await load();else note('メールアドレスとパスワードで新規登録、またはログインしてね。');sb.auth.onAuthStateChange(async(_e,session)=>{user=session?.user||null;showApp();if(user)await load();});}
+else {note('まだSupabaseとの接続設定が必要です。READMEの「Supabase設定」を先に行ってね。');}
+$('signup').onclick=async()=>{if(!sb)return alert('READMEのSupabase設定が必要です');const {error}=await sb.auth.signUp({email:$('email').value,password:$('password').value});alert(error?.message||'登録しました。確認メールが届いたら認証してログインしてね。');};
+$('login').onclick=async()=>{if(!sb)return alert('READMEのSupabase設定が必要です');const {error}=await sb.auth.signInWithPassword({email:$('email').value,password:$('password').value});if(error)alert(error.message);};
+$('reset').onclick=async()=>{if(!sb)return alert('READMEのSupabase設定が必要です');const {error}=await sb.auth.resetPasswordForEmail($('email').value,{redirectTo:location.origin});alert(error?.message||'パスワード再設定メールを送信しました。');};
+$('logout').onclick=async()=>{await sb.auth.signOut();};
+async function load(){const {data,error}=await sb.from('cards').select('*').order('created_at',{ascending:false});if(error){note('読み込みエラー：'+error.message+' / READMEのSQL設定を確認してね');return;}items=data||[];render();note('ログイン中：クラウドに保存されています。');await checkCatalog();}
+function render(){const q=$('search').value.toLowerCase(),s=$('filterSeries').value,o=$('filterOwned').value,f=$('filterFav').checked;let list=items.filter(x=>(!q||[x.name,x.character,x.number,x.release,x.memo].join(' ').toLowerCase().includes(q))&&(!s||x.series===s)&&(!o||(o==='owned'?x.quantity>0:o==='unowned'?x.quantity===0:x.quantity>1))&&(!f||x.favorite));$('total').textContent=items.reduce((a,x)=>a+(+x.quantity||0),0);$('types').textContent=items.filter(x=>x.quantity>0).length;$('dupes').textContent=items.reduce((a,x)=>a+Math.max(0,(+x.quantity||0)-1),0);$('count').textContent=`${list.length}件`; $('cards').innerHTML=list.map(x=>`<article class="card">${x.image_url?`<img src="${esc(x.image_url)}" alt="">`:`<div style="aspect-ratio:3/4;display:grid;place-items:center;color:#a77b9c">♡ NO IMAGE ♡</div>`}<div class="body"><h3>${esc(x.name)}</h3><p>${esc(x.character||'')} ${esc(x.rarity||'')}</p><p>${esc(x.series||'')} / ${esc(x.release||'')}</p><p>番号：${esc(x.number||'-')}</p><p class="qty">所持：${x.quantity||0}枚</p><div class="row"><button class="secondary" data-plus="${x.id}">＋</button><button class="secondary" data-minus="${x.id}">−</button></div><div class="row"><button class="secondary" data-edit="${x.id}">編集</button><button class="secondary" data-fav="${x.id}">${x.favorite?"♥":"♡"}</button><button class="danger" data-del="${x.id}">削除</button></div></div></article>`).join('');document.querySelectorAll('[data-plus]').forEach(b=>b.onclick=()=>qty(b.dataset.plus,1));document.querySelectorAll('[data-minus]').forEach(b=>b.onclick=()=>qty(b.dataset.minus,-1));document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>edit(b.dataset.edit));document.querySelectorAll('[data-fav]').forEach(b=>b.onclick=()=>favorite(b.dataset.fav));document.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>removeCard(b.dataset.del));}
+function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+async function favorite(id){const x=items.find(a=>a.id===id);const {error}=await sb.from('cards').update({favorite:!x.favorite}).eq('id',id);if(error)alert(error.message);else await load();}
+async function removeCard(id){if(!confirm('このカードを図鑑から削除する？'))return;const {error}=await sb.from('cards').delete().eq('id',id);if(error)alert(error.message);else await load();}
+async function qty(id,d){let x=items.find(a=>a.id===id);const {error}=await sb.from('cards').update({quantity:Math.max(0,(+x.quantity||0)+d)}).eq('id',id);if(error)alert(error.message);else await load();}
+function clear(){['editId','name','character','release','number','rarity','memo'].forEach(id=>$(id).value='');$('quantity').value=0;$('photo').value='';$('series').value='ひみつのアイプリ';$('kind').value='通常';}
+function edit(id){let x=items.find(a=>a.id===id);$('editId').value=id;for(let k of ['name','character','release','number','rarity','memo','quantity','series','kind'])$(k).value=x[k]??'';window.scrollTo({top:0,behavior:'smooth'});}
+$('clear').onclick=clear;
+$('save').onclick=async()=>{if(!sb||!user)return alert('ログインしてね');if(!$('name').value.trim())return alert('カード名を入力してね');let id=$('editId').value,old=items.find(x=>x.id===id),image_url=old?.image_url||null,file=$('photo').files[0];if(file){const path=`${user.id}/${crypto.randomUUID()}-${file.name.replace(/[^a-zA-Z0-9._-]/g,'_')}`;const {error}=await sb.storage.from('card-images').upload(path,file,{upsert:true});if(error)return alert('画像アップロード失敗：'+error.message);image_url=sb.storage.from('card-images').getPublicUrl(path).data.publicUrl;}
+let payload={user_id:user.id,name:$('name').value.trim(),character:$('character').value,series:$('series').value,release:$('release').value,number:$('number').value,rarity:$('rarity').value,kind:$('kind').value,quantity:Math.max(0,+$('quantity').value||0),memo:$('memo').value,image_url,favorite:old?.favorite||false};
+let result=id?await sb.from('cards').update(payload).eq('id',id):await sb.from('cards').insert(payload);if(result.error)alert(result.error.message);else{clear();await load();}};
+$('search').oninput=render;$('filterSeries').onchange=render;$('filterOwned').onchange=render;$('filterFav').onchange=render;
+
+// catalog.json は公式情報を確認して整備した公開カタログ。新データのみワンタップで追加する。
+let pendingCatalog=[];
+async function checkCatalog(){if(!user){$('updateStatus').textContent='ログイン後に確認できます';return;}$('updateStatus').textContent='カタログを確認中…';try{const r=await fetch('./catalog.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('catalog.jsonを取得できません');const catalog=await r.json();const known=new Set(items.map(x=>x.catalog_id).filter(Boolean));const byNum=new Set(items.map(x=>`${x.series}|${x.release}|${x.number}|${x.name}`));pendingCatalog=(catalog.cards||[]).filter(c=>!known.has(c.catalog_id)&&!byNum.has(`${c.series}|${c.release}|${c.number}|${c.name}`));$('updateStatus').textContent=pendingCatalog.length?`新しいカードデータが ${pendingCatalog.length} 件あります（カタログ v${catalog.version||'?'})`:`最新です（カタログ v${catalog.version||'?'})`; $('applyUpdates').disabled=!pendingCatalog.length;}catch(e){$('updateStatus').textContent='更新確認に失敗しました。通信状態とcatalog.jsonを確認してね。';$('applyUpdates').disabled=true;}}
+$('checkUpdates').onclick=checkCatalog;
+$('applyUpdates').onclick=async()=>{if(!pendingCatalog.length)return;if(!confirm(`${pendingCatalog.length}件のカードを追加する？既存カードと所持数は変更しません。`))return;const rows=pendingCatalog.map(c=>({user_id:user.id,catalog_id:c.catalog_id,name:c.name,character:c.character||'',series:c.series||'その他・スペシャル',release:c.release||'',number:c.number||'',rarity:c.rarity||'',kind:c.kind||'通常',quantity:0,memo:c.memo||'',image_url:c.image_url||null,favorite:false}));const {error}=await sb.from('cards').insert(rows);if(error){alert('追加できませんでした：'+error.message);return;}pendingCatalog=[];await load();await checkCatalog();alert('新しいカードを追加したよ！');};
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+
+$('export').onclick=()=>{const blob=new Blob([JSON.stringify(items,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='aipri-backup.json';a.click();URL.revokeObjectURL(a.href);};
+$('import').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const arr=JSON.parse(await f.text());if(!Array.isArray(arr))throw Error('JSON形式が違います');for(const x of arr){const p={user_id:user.id,name:x.name||'名称未設定',character:x.character||'',series:x.series||'その他・スペシャル',release:x.release||'',number:x.number||'',rarity:x.rarity||'',kind:x.kind||'その他',quantity:+x.quantity||0,memo:x.memo||'',image_url:x.image_url||null};const {error}=await sb.from('cards').insert(p);if(error)throw error;}await load();alert('読み込みました');}catch(err){alert('読み込み失敗：'+err.message)}e.target.value='';};
+</script></body></html>
