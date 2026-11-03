@@ -1,0 +1,9 @@
+{
+  "name": "My AiPri Collection",
+  "short_name": "AiPri図鑑",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#160f17",
+  "theme_color": "#21101d",
+  "icons": []
+}
